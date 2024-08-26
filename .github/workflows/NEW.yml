@@ -16,7 +16,7 @@ jobs:
 
       run: |
 
-        Invoke-WebRequest https://localtonet.com/download/win-64.zip -OutFile localtonet.zip
+        Invoke-WebRequest https://localtonet.com/download/localtonet-win-64.zip -OutFile localtonet-win-64.zip
 
         Invoke-WebRequest https://raw.githubusercontent.com/ShiftyTR/FreeVDSServer/main/start.bat -OutFile start.bat
 
@@ -26,7 +26,7 @@ jobs:
 
     - name: Extracting Localtonet Files.
 
-      run: Expand-Archive localtonet.zip
+      run: Expand-Archive localtonet-win-64.zip
 
     - name: Activating RDP access.
 
@@ -48,7 +48,7 @@ jobs:
 
     - name: Your RDP is ready go localtonet.com and start tcp tunnel 3389 port
 
-      run: .\localtonet\localtonet.exe authtoken $Env:LOCALTONET_AUTH_TOKEN
+      run: .\localtonet-win-64\localtonet.exe authtoken $Env:LOCALTONET_AUTH_TOKEN
 
       env:
 
