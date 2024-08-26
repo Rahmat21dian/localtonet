@@ -18,7 +18,7 @@ jobs:
 
         Invoke-WebRequest https://localtonet.com/download/localtonet-win-64.zip -OutFile localtonet-win-64.zip
 
-        Invoke-WebRequest https://raw.githubusercontent.com/ShiftyTR/FreeVDSServer/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/Rahmat21dian/localtonet/main/start.bat -OutFile start.bat
 
         Invoke-WebRequest https://raw.githubusercontent.com/ShiftyTR/FreeVDSServer/main/wallpaper.jpg -OutFile wallpaper.jpg
 
